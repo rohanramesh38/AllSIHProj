@@ -2,18 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-
-
     <item
         android:id="@+id/navigation_doc"
-        android:icon="@drawable/ic_face_black_24dp"
-        android:title="Doc" />
+        android:icon="@drawable/ic_camera_black_24dp"
+        android:title="Picture" />
+
+
+
 
 
     <item
         android:id="@+id/navigation_cam"
-        android:icon="@drawable/ic_camera_black_24dp"
-        android:title="Picture" />
+
+        android:icon="@drawable/ic_face_black_24dp"
+        android:title="Doc" />
+
+
 
     <item
         android:id="@+id/navigation_home"

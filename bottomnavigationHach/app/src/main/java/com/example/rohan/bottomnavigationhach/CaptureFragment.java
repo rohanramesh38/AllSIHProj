@@ -33,6 +33,9 @@ public class CaptureFragment extends Fragment {
      */
     public static CaptureFragment newInstance() {
         CaptureFragment fragment = new CaptureFragment();
+      if(fragment==null) {
+         // CaptureFragment fragment = new CaptureFragment();
+      }
         return fragment;
     }
 
@@ -74,7 +77,7 @@ public class CaptureFragment extends Fragment {
                 case 0:   return AllDocFragment.newInstance();
                 case 1:return SpeDocFragment.newInstance();
                 case 2:return FavDocFragment.newInstance();
-                default:return AllDocFragment.newInstance();
+                default:return null;
             }
 
 
@@ -90,7 +93,7 @@ public class CaptureFragment extends Fragment {
                 case 0:   return AllDocFragment.PAGE_TITLE;
                 case 1:return SpeDocFragment.PAGE_TITLE;
                 case 2:return FavDocFragment.PAGE_TITLE;
-                default:return AllDocFragment.PAGE_TITLE;
+                default:return null;
             }
 
         }

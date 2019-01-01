@@ -73,7 +73,7 @@ public class DocFragment extends Fragment {
                     //
                 }
                 adapter = new MyAdapter(getActivity(), list);
-                recyclerView.setAdapter(adapter);
+        //        recyclerView.setAdapter(adapter);
 
 
             }

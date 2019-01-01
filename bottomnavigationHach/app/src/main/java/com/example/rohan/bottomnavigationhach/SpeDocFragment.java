@@ -56,7 +56,7 @@ String S="Others";
 
         View v = inflater.inflate(R.layout.fragment_spe_doc, container, false);
 
-        String[] values = {"Others", "Pediatrician", "ornithologist", "Genral", "Dermatologist"};
+        String[] values = {"Others", "Pediatrician", "ornithologist", "General", "Dermatologist","Neurotherapist"};
         Spinner spinner = (Spinner) v.findViewById(R.id.spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
@@ -99,6 +99,8 @@ String S="Others";
         list1 = new ArrayList<profile>();
 
         loaddata();
+
+
 //        init();
 
 
@@ -129,7 +131,11 @@ String S="Others";
                 adapter = new MyAdapter(getActivity(), list1);
                 recyclerView.setAdapter(adapter);
 
+                if(list1.size()==0)
+                {
+                    Toast.makeText(getActivity(), "No "+S+" Found", Toast.LENGTH_LONG).show();
 
+                }
             }
 
             @Override

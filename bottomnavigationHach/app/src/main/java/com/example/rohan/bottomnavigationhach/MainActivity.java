@@ -2,6 +2,8 @@ package com.example.rohan.bottomnavigationhach;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -33,7 +35,7 @@ bottomNavigationView.setSelectedItemId(R.id.navigation_home);
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
 
-            switch (menuItem.getItemId())
+          /*  switch (menuItem.getItemId())
             {
 
                 case R.id.navigation_home:
@@ -42,7 +44,18 @@ bottomNavigationView.setSelectedItemId(R.id.navigation_home);
 
 
                 case R.id.navigation_cam:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,captureFragment).commit();
+
+                {
+                    if (captureFragment != null) {
+                        FragmentManager fm = getSupportFragmentManager();
+                        fm.beginTransaction()
+                                .replace(R.id.frameLayout, captureFragment)
+                                .commit();
+                    }
+
+                }
+
+                   // getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout,captureFragment).commit();
                     return  true;
 
 
@@ -61,8 +74,33 @@ bottomNavigationView.setSelectedItemId(R.id.navigation_home);
                     return  true;
            
             }
+            */
+
+        Fragment selectedFragement = null;
+        switch(menuItem.getItemId())
+        {
+            case R.id.navigation_doc:
+                selectedFragement=new DocFragment();
+                break;
+            case R.id.navigation_cam:
+                selectedFragement=new CaptureFragment(); break;
+            case R.id.navigation_home:
+                selectedFragement = new HomeFragment(); break;
+            case R.id.navigation_like:
+                selectedFragement=new LikeFragment();break;
+
+            case R.id.navigation_setting:
+                selectedFragement=new SettingsFragment();break;
 
 
-        return false;
+        }
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.frameLayout,selectedFragement)
+                .commit();
+
+        return true;
+
+
     }
 }

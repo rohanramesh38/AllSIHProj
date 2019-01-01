@@ -66,7 +66,7 @@ public class AllDocFragment extends Fragment {
 //        init();
 
 
-        Toast.makeText(getActivity(), "load", Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(), "loading..", Toast.LENGTH_LONG).show();
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Profile");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
