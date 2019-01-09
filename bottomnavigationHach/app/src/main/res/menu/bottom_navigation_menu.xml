@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/navigation_doc"
+        android:icon="@drawable/ic_camera_black_24dp"
+        android:title="Picture" />
+
+
+
+
+
+    <item
+        android:id="@+id/navigation_cam"
+
+        android:icon="@drawable/ic_face_black_24dp"
+        android:title="Doc" />
+
+
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
+
+
+    <item
+        android:id="@+id/navigation_like"
+        android:icon="@drawable/ic_thumb_up_black_24dp"
+        android:title="Like" />
+
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="setting" />
+</menu>
